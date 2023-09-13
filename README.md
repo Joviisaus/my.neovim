@@ -6,4 +6,4 @@ Most of my configuration is copied from [eggtoopain](https://github.com/eggtoopa
 The dashboard:
 ![dashboard](docs/dashboard.png) 
 
-
+![dashboard](docs/ikun.png)
