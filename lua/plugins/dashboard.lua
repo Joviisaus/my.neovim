@@ -1,5 +1,5 @@
 require("startup").setup({
-    theme = "gensin"
+    theme = "Genshin"
 
 }) -- put theme name here
 
