@@ -7,3 +7,7 @@ The dashboard:
 ![dashboard](docs/dashboard.png) 
 
 ![dashboard](docs/ikun.png)
+
+![dashboard](docs/zelda.png)
+
+![dashboard](docs/zelda-row.png)
