@@ -34,5 +34,6 @@ opt.smartcase = true
 opt.termguicolors = true
 opt.signcolumn = "yes"
 
-vim.cmd('colorscheme github_dark_colorblind')
+vim.g.colors_name = 'github_dark_colorblind'
+vim.cmd('colorscheme ' .. vim.g.colors_name)
 

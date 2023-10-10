@@ -1,5 +1,5 @@
 require('lualine').setup({
   options = {
-    theme = 'github_dark_colorblind'
+    theme = vim.g.colors_name
   }
 })
