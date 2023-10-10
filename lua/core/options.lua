@@ -34,6 +34,6 @@ opt.smartcase = true
 opt.termguicolors = true
 opt.signcolumn = "yes"
 
-vim.g.colors_name = 'github_dark_colorblind'
+vim.g.colors_name = 'gruvbox'
 vim.cmd('colorscheme ' .. vim.g.colors_name)
 
