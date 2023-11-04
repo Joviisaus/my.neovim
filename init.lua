@@ -17,5 +17,6 @@ require("plugins/gitsigns")
 require("plugins/telescope")
 require("plugins/toggleterm")
 require("plugins/smoothcursor")
+require("plugins/mini")
 -- require("plugins/debug")
 

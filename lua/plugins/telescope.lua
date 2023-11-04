@@ -11,9 +11,8 @@ require'telescope'.setup {
       -- find command (defaults to `fd`)
       find_cmd = "fd"
     }
-  },
 }
-
+}
 
 
 -- 进入telescope页面会是插入模式，回到正常模式就可以用j和k来移动了

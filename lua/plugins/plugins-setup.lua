@@ -32,7 +32,7 @@ return require('packer').startup(function(use)
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
   use { "ellisonleao/gruvbox.nvim" } 
-
+  use 'echasnovski/mini.nvim'
   use 'theHamsta/nvim-dap-virtual-text'
   use 'mfussenegger/nvim-dap'
   use {
@@ -41,6 +41,9 @@ return require('packer').startup(function(use)
     require('goto-preview').setup {}
   end
 }
+  use {'TobinPalmer/rayso.nvim',
+    require('rayso').setup()
+  }
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
   require("toggleterm").setup()
 end}
