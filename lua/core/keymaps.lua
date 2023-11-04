@@ -29,3 +29,5 @@ keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 keymap.set("t",'<c-q>',[[<c-\><c-n>]])
 
 keymap.set("n",'<c-m>',":Telescope media_files")
+
+keymap.set("n", "gp", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", {noremap=true})

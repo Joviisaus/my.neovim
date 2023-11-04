@@ -33,14 +33,23 @@ return require('packer').startup(function(use)
   }
   use { "ellisonleao/gruvbox.nvim" } 
 
-
-
-
+  use 'theHamsta/nvim-dap-virtual-text'
+  use 'mfussenegger/nvim-dap'
+  use {
+  'rmagatti/goto-preview',
+  config = function()
+    require('goto-preview').setup {}
+  end
+}
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
   require("toggleterm").setup()
 end}
 
-
+  use { 'gen740/SmoothCursor.nvim',
+  config = function()
+    require('smoothcursor').setup()
+  end
+}
   use {
     'nvim-tree/nvim-tree.lua',  -- 文档树
     requires = {
