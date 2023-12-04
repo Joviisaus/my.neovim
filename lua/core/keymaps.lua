@@ -7,8 +7,8 @@ keymap.set("i", "jk", "<ESC>")
 
 -- ---------- 视觉模式 ---------- ---
 -- 单行或多行移动
-keymap.set("v","j",":m '>+1<CR>gv=gv")
-keymap.set("v","k",":m '>-2<CR>gv=gv")
+keymap.set("v","<leader>j",":m '>+1<CR>gv=gv")
+keymap.set("v","<leader>k",":m '>-2<CR>gv=gv")
 
 -- ---------- 正常模式 ---------- ---
 -- 窗口

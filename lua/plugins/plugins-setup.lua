@@ -59,6 +59,9 @@ end}
       'nvim-tree/nvim-web-devicons', -- 文档树图标
     }
   }
+  use {
+    'brenoprata10/nvim-highlight-colors'
+  }
   use "christoomey/vim-tmux-navigator" -- 用ctl-hjkl来定位窗口
 -- use "nvim-treesitter/nvim-treesitter" -- 语法高亮
   use "p00f/nvim-ts-rainbow" -- 配合treesitter，不同括号颜色区分
@@ -75,6 +78,9 @@ end}
   use "rafamadriz/friendly-snippets"
   use "hrsh7th/cmp-path" -- 文件路径
 
+  use {
+  "ray-x/lsp_signature.nvim",
+}
   use "numToStr/Comment.nvim" -- gcc和gc注释
   use "windwp/nvim-autopairs" -- 自动补全括号
 
@@ -103,7 +109,7 @@ end}
 }
 
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',  -- 文件检索
+    'nvim-telescope/telescope.nvim', tag = '0.1.4',  -- 文件检索
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use "nvim-lua/popup.nvim"
