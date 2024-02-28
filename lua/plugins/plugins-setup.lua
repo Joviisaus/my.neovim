@@ -22,7 +22,7 @@ vim.cmd([[
   augroup end
 ]])
 
-return require('packer').startup(function(use)
+return require('packer').startup({function(use)
   use 'wbthomason/packer.nvim'
   use 'folke/tokyonight.nvim' 
   use 'projekt0n/github-nvim-theme'
@@ -35,6 +35,12 @@ return require('packer').startup(function(use)
   use 'echasnovski/mini.nvim'
   use 'theHamsta/nvim-dap-virtual-text'
   use 'mfussenegger/nvim-dap'
+  use {'rcarriga/nvim-notify'
+  }
+  use 'MunifTanjim/nui.nvim' 
+  use 'folke/noice.nvim'
+  
+
   use {
   'rmagatti/goto-preview',
   config = function()
@@ -115,7 +121,55 @@ end}
   use "nvim-lua/popup.nvim"
   use "nvim-telescope/telescope-media-files.nvim"
 
+  use "williamboman/mason-lspconfig.nvim" 
+  use "neovim/nvim-lspconfig"
+  use "ray-x/lsp_signature.nvim"
+  use "Shatur/neovim-cmake" 
+  use "hrsh7th/nvim-cmp"
+  use "hrsh7th/vim-vsnip" 
+  use "hrsh7th/cmp-vsnip"
+  use "hrsh7th/cmp-nvim-lsp" 
+  use "hrsh7th/cmp-buffer" 
+  use "hrsh7th/cmp-path" 
+  use "hrsh7th/cmp-cmdline" 
+  use "hrsh7th/cmp-nvim-lsp-signature-help" 
+  use "rafamadriz/friendly-snippets" 
+  use "onsails/lspkind-nvim"
+  use "glepnir/lspsaga.nvim"
+  use "mhartington/formatter.nvim"
+  -- "jose-elias-alvarez/null-ls.nvim",
+  -- "nvim-lua/plenary.nvim",
+  -- TypeScript 增强
+  use "jose-elias-alvarez/nvim-lsp-ts-utils"
+  use "nvim-lua/plenary.nvim"
+  -- Lua 增强
+  use "folke/neodev.nvim"
+  -- JSON 增强
+  use "b0o/schemastore.nvim"
+  -- Rust 增强
+  use "simrat39/rust-tools.nvim"
+
+  use "mfussenegger/nvim-dap"
+  use "rcarriga/nvim-dap-ui"
+  use "theHamsta/nvim-dap-virtual-text"
+  use "mfussenegger/nvim-dap-python"
+
+  
+
   if packer_bootstrap then
     require('packer').sync()
   end
-end)
+end,
+  
+  config = {
+    git = {
+      default_url_format = 'git@github.com:%s',
+    },
+    display = {
+      open_fn = function()
+        return require("packer.util").float({border = "single" })
+      end,
+    },
+},})
+
+
