@@ -38,8 +38,16 @@ return require('packer').startup({function(use)
   use {'rcarriga/nvim-notify'
   }
   use 'MunifTanjim/nui.nvim' 
-  use 'folke/noice.nvim'
-  
+  use {'folke/noice.nvim', 
+      opts = {
+      lsp = {
+        signature = {
+          enabled = false,
+        },
+      },
+    },
+
+  }
 
   use {
   'rmagatti/goto-preview',
@@ -120,10 +128,9 @@ end}
   }
   use "nvim-lua/popup.nvim"
   use "nvim-telescope/telescope-media-files.nvim"
-
+  use 'Civitasv/cmake-tools.nvim'
   use "williamboman/mason-lspconfig.nvim" 
   use "neovim/nvim-lspconfig"
-  use "ray-x/lsp_signature.nvim"
   use "Shatur/neovim-cmake" 
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/vim-vsnip" 
