@@ -16,6 +16,14 @@ keymap.set("v","<leader>k",":m '>-2<CR>gv=gv")
 keymap.set("n", "<leader>sv", "<C-w>v") -- 水平新增窗口
 keymap.set("n", "<leader>sh", "<C-w>s") -- 垂直新增窗口
 
+-- 调整窗口大小
+keymap.set("n", "<leader>l", ":vertical resize +1<CR>")
+keymap.set("n", "<leader>h", ":vertical resize -1<CR>")
+keymap.set("n", "<leader>hh", ":resize -1<CR>")
+keymap.set("n", "<leader>ll", ":resize +1<CR>")
+
+
+
 -- 取消高亮
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
@@ -27,13 +35,21 @@ keymap.set("n", "<C-H>", ":bprevious<CR>")
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
-keymap.set("t",'<c-q>',[[<c-\><c-n>]])
+keymap.set("t",'<C-q>',[[<c-\><c-n>]])
 
-keymap.set("n",'<c-m>',":Telescope media_files")
+keymap.set("n",'<C-m>',":Telescope media_files")
 
 keymap.set("n", "gp", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", {noremap=true})
 
 keymap.set('v', '<leader>rs', require('lib.create').create_snippet)
+
+
+-- telescope
+
+-- vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+-- vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})  -- 环境里要安装ripgrep
+-- vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+-- vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 local pluginKeys = {}
 local opt = {
@@ -104,7 +120,7 @@ pluginKeys.cmp = function(cmp)
     ['<C-u>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
     ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
         -- Super Tab
-    ["<Tab>"] = cmp.mapping(function(fallback)
+    ["<C-Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
       elseif vim.fn["vsnip#available"](1) == 1 then

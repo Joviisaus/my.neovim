@@ -48,6 +48,7 @@ return require('packer').startup({function(use)
     },
 
   }
+  use { 'sainnhe/everforest' }
 
   use {
   'rmagatti/goto-preview',

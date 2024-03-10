@@ -35,6 +35,6 @@ opt.termguicolors = true
 opt.signcolumn = "yes"
 
 vim.o.background = "dark"
-vim.g.colors_name = 'tokyonight-night'
+vim.g.colors_name = 'everforest'
 vim.cmd('colorscheme ' .. vim.g.colors_name)
 vim.notify = require("notify")
