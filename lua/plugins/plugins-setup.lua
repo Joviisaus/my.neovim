@@ -27,6 +27,7 @@ return require('packer').startup({function(use)
   use 'folke/tokyonight.nvim' 
   use 'projekt0n/github-nvim-theme'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use 'voldikss/vim-translator'
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }

@@ -161,7 +161,7 @@ _G.packer_plugins = {
     url = "git@github.com:lewis6991/gitsigns.nvim"
   },
   ["glow.nvim"] = {
-    config = { "\27LJ\2\nÁ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\a\nwidth\3P\npager\1\vheight\3d\vborder\vshadow\16width_ratio\4æÌ™³\6æÌ™ÿ\3\14glow_path-/opt/homebrew/Cellar/glow/1.5.1/bin/glow\17height_ratio\4æÌ™³\6æÌ™ÿ\3\nsetup\tglow\frequire\0" },
+    config = { "\27LJ\2\nÁ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\a\17height_ratio\4æÌ™³\6æÌ™ÿ\3\14glow_path-/opt/homebrew/Cellar/glow/1.5.1/bin/glow\16width_ratio\4æÌ™³\6æÌ™ÿ\3\vheight\3d\nwidth\3P\npager\1\vborder\vshadow\nsetup\tglow\frequire\0" },
     loaded = true,
     path = "/Users/jingouyang/.local/share/nvim/site/pack/packer/start/glow.nvim",
     url = "git@github.com:ellisonleao/glow.nvim"
@@ -365,6 +365,11 @@ _G.packer_plugins = {
     path = "/Users/jingouyang/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
     url = "git@github.com:christoomey/vim-tmux-navigator"
   },
+  ["vim-translator"] = {
+    loaded = true,
+    path = "/Users/jingouyang/.local/share/nvim/site/pack/packer/start/vim-translator",
+    url = "git@github.com:voldikss/vim-translator"
+  },
   ["vim-vsnip"] = {
     loaded = true,
     path = "/Users/jingouyang/.local/share/nvim/site/pack/packer/start/vim-vsnip",
@@ -373,6 +378,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: glow.nvim
+time([[Config for glow.nvim]], true)
+try_loadstring("\27LJ\2\nÁ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\a\17height_ratio\4æÌ™³\6æÌ™ÿ\3\14glow_path-/opt/homebrew/Cellar/glow/1.5.1/bin/glow\16width_ratio\4æÌ™³\6æÌ™ÿ\3\vheight\3d\nwidth\3P\npager\1\vborder\vshadow\nsetup\tglow\frequire\0", "config", "glow.nvim")
+time([[Config for glow.nvim]], false)
+-- Config for: goto-preview
+time([[Config for goto-preview]], true)
+try_loadstring("\27LJ\2\n>\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\17goto-preview\frequire\0", "config", "goto-preview")
+time([[Config for goto-preview]], false)
+-- Config for: startup.nvim
+time([[Config for startup.nvim]], true)
+try_loadstring("\27LJ\2\nS\0\0\5\0\4\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0006\2\0\0'\4\3\0B\2\2\0A\0\0\1K\0\1\0\22plugins.dashboard\nsetup\fstartup\frequire\0", "config", "startup.nvim")
+time([[Config for startup.nvim]], false)
 -- Config for: SmoothCursor.nvim
 time([[Config for SmoothCursor.nvim]], true)
 try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\17smoothcursor\frequire\0", "config", "SmoothCursor.nvim")
@@ -381,18 +398,6 @@ time([[Config for SmoothCursor.nvim]], false)
 time([[Config for toggleterm.nvim]], true)
 try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
 time([[Config for toggleterm.nvim]], false)
--- Config for: glow.nvim
-time([[Config for glow.nvim]], true)
-try_loadstring("\27LJ\2\nÁ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\a\nwidth\3P\npager\1\vheight\3d\vborder\vshadow\16width_ratio\4æÌ™³\6æÌ™ÿ\3\14glow_path-/opt/homebrew/Cellar/glow/1.5.1/bin/glow\17height_ratio\4æÌ™³\6æÌ™ÿ\3\nsetup\tglow\frequire\0", "config", "glow.nvim")
-time([[Config for glow.nvim]], false)
--- Config for: startup.nvim
-time([[Config for startup.nvim]], true)
-try_loadstring("\27LJ\2\nS\0\0\5\0\4\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0006\2\0\0'\4\3\0B\2\2\0A\0\0\1K\0\1\0\22plugins.dashboard\nsetup\fstartup\frequire\0", "config", "startup.nvim")
-time([[Config for startup.nvim]], false)
--- Config for: goto-preview
-time([[Config for goto-preview]], true)
-try_loadstring("\27LJ\2\n>\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\17goto-preview\frequire\0", "config", "goto-preview")
-time([[Config for goto-preview]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
