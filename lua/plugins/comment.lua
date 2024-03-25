@@ -8,8 +8,6 @@ require('flash').setup{
   },
   label = {
     prefix = "🔥",
-    after = false,
-    before = true,
     reuse = "all",
     rainbow = {
       enable = true,
