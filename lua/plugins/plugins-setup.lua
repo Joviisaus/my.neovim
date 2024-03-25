@@ -27,6 +27,7 @@ return require('packer').startup({function(use)
   use 'folke/tokyonight.nvim' 
   use 'projekt0n/github-nvim-theme'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use "folke/flash.nvim"
   use 'voldikss/vim-translator'
   use {
     'nvim-lualine/lualine.nvim',
@@ -39,6 +40,7 @@ return require('packer').startup({function(use)
   use {'rcarriga/nvim-notify'
   }
   use 'MunifTanjim/nui.nvim' 
+  use { "nvim-neotest/nvim-nio" }
   use {'folke/noice.nvim', 
       opts = {
       lsp = {
