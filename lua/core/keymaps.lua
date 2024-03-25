@@ -8,8 +8,8 @@ keymap.set("i", "jk", "<ESC>")
 
 -- ---------- 视觉模式 ---------- ---
 -- 单行或多行移动
-keymap.set("v","<leader>j",":m '>+1<CR>gv=gv")
-keymap.set("v","<leader>k",":m '>-2<CR>gv=gv")
+keymap.set("v", "<leader>j", ":m '>+1<CR>gv=gv")
+keymap.set("v", "<leader>k", ":m '>-2<CR>gv=gv")
 
 -- ---------- 正常模式 ---------- ---
 -- 窗口
@@ -35,13 +35,23 @@ keymap.set("n", "<C-H>", ":bprevious<CR>")
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
-keymap.set("t",'<C-q>',[[<c-\><c-n>]])
+keymap.set("t", '<C-q>', [[<c-\><c-n>]])
 
-keymap.set("n",'<C-m>',":Telescope media_files")
+keymap.set("n", '<C-m>', ":Telescope media_files")
 
-keymap.set("n", "gp", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", {noremap=true})
+keymap.set("n", "gp", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", { noremap = true })
 
 keymap.set('v', '<leader>rs', require('lib.create').create_snippet)
+
+keymap.set('n', 's', function() require("flash").jump() end)
+keymap.set('x', 's', function() require("flash").jump() end)
+keymap.set('o', 's', function() require("flash").jump() end)
+
+keymap.set('n', 'S', function() require("flash").treesitter() end)
+keymap.set('x', 'S', function() require("flash").treesitter() end)
+keymap.set('o', 'S', function() require("flash").treesitter() end)
+
+
 
 
 -- telescope
@@ -57,10 +67,11 @@ local opt = {
   silent = true,
 }
 
+
 pluginKeys.comment = {
   -- Normal 模式快捷键
   toggler = {
-    line = 'gcc', -- 行注释
+    line = 'gcc',  -- 行注释
     block = 'gbc', -- 块注释
   },
   -- Visual 模式
@@ -69,6 +80,8 @@ pluginKeys.comment = {
     bock = 'gb',
   },
 }
+
+
 
 pluginKeys.mapLSP = function(mapbuf)
   mapbuf('n', '<leader>s', '<cmd>lua vim.lsp.buf.format { async = true }<CR>', opt)
@@ -119,7 +132,7 @@ pluginKeys.cmp = function(cmp)
     -- 如果窗口内容太多，可以滚动
     ['<C-u>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
     ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
-        -- Super Tab
+    -- Super Tab
     ["<C-Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
@@ -130,7 +143,7 @@ pluginKeys.cmp = function(cmp)
       else
         fallback()
       end
-    end, {"i", "s"}),
+    end, { "i", "s" }),
 
     ["<S-Tab>"] = cmp.mapping(function()
       if cmp.visible() then
@@ -138,7 +151,7 @@ pluginKeys.cmp = function(cmp)
       elseif vim.fn["vsnip#jumpable"](-1) == 1 then
         feedkey("<Plug>(vsnip-jump-prev)", "")
       end
-    end, {"i", "s"})
+    end, { "i", "s" })
   }
 end
 
